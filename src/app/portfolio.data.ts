@@ -94,22 +94,32 @@ export const experience = [
     organization: 'Dhaka Mercantile Co-operative Bank Ltd.',
     position: 'Software Engineer (Senior Technical Officer)',
     period: 'November 2024 – Present',
-    description:
-      'My work includes Core Banking System transaction logic and data-integrity workflows. As primary developer and technical owner of the Case Management Application, I drove architecture, database design, backend APIs, legal-case workflows, integrations, and deployment, coordinating technical decisions with senior team members and business stakeholders. I built Member Transfer and contributed to Cheque Book Management and reconciliation. I develop and maintain enterprise banking applications with C#, ASP.NET Core, ASP.NET MVC, Angular, and SQL Server, applying modular design and separation of concerns. I also contribute to Auth Gateway authentication, authorization, and identity workflows, alongside software reliability, data validation, access control, and production issue resolution.',
+    responsibilities: [
+      'My work includes Core Banking System transaction logic and data-integrity workflows.',
+      'As primary developer and technical owner of the Case Management Application, I drove architecture, database design, backend APIs, legal-case workflows, integrations, and deployment, coordinating technical decisions with senior team members and business stakeholders.',
+      'I built Member Transfer and contributed to Cheque Book Management and reconciliation.',
+      'I develop and maintain enterprise banking applications with C#, ASP.NET Core, ASP.NET MVC, Angular, and SQL Server, applying modular design and separation of concerns.',
+      'I also contribute to Auth Gateway authentication, authorization, and identity workflows, alongside software reliability, data validation, access control, and production issue resolution.',
+    ],
   },
   {
     organization: 'Itransition',
     position: '.NET Development Training Program · Remote',
     period: 'September 2024 – October 2024',
-    description:
-      'Built C# authentication features with password hashing and salting, JWT, and session management. Connected Angular components to backend workflows.',
+    responsibilities: [
+      'Built C# authentication features with password hashing and salting, JWT, and session management.',
+      'Connected Angular components to backend workflows.',
+    ],
   },
   {
     organization: 'BigLedger Sdn Bhd',
     position: 'Software Developer Intern',
     period: 'September 2023 – February 2024',
-    description:
-      'Investigated PostgreSQL data issues in ERP software, supported AWS server operations, tested ERP workflows, and validated data consistency between backend APIs and the frontend.',
+    responsibilities: [
+      'Investigated PostgreSQL data issues in ERP software.',
+      'Supported AWS server operations.',
+      'Tested ERP workflows and validated data consistency between backend APIs and the frontend.',
+    ],
   },
 ];
 

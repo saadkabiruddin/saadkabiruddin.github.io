@@ -251,7 +251,11 @@
             <p class="period">{{ job.period }}</p>
           </div>
           <p>{{ job.position }}</p>
-          <p>{{ job.description }}</p>
+          <ul>
+            @for (responsibility of job.responsibilities; track responsibility) {
+              <li>{{ responsibility }}</li>
+            }
+          </ul>
         </article>
       }
     </section>
