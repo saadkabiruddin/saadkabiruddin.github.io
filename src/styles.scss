@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light;
+  --background: #fff;
+  --text: #252a2e;
+  --heading: #20272d;
+  --muted: #596168;
+  --border: #dce0e3;
+  --link: #245b80;
+  --link-hover: #163b55;
+  --selection: #dbeaf3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--background);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: var(--link);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  overflow-wrap: anywhere;
+}
+a:hover {
+  color: var(--link-hover);
+  text-decoration-thickness: 2px;
+}
+a:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
+::selection {
+  background: var(--selection);
+}
+/* A small marker distinguishes external resources from same-page navigation. */
+a[href^='https://']::after {
+  content: ' ↗';
+  font-size: 0.8em;
+}
+
+@mixin dark-theme {
+  color-scheme: dark;
+  --background: #171c21;
+  --text: #dde3e8;
+  --heading: #f0f3f6;
+  --muted: #aab5bf;
+  --border: #39434c;
+  --link: #91c9ee;
+  --link-hover: #c0e3fa;
+  --selection: #35536b;
+}
+:root[data-theme='dark'] {
+  @include dark-theme;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']):not([data-theme='dark']) {
+    @include dark-theme;
+  }
+}
+@media print {
+  :root[data-theme],
+  :root {
+    color-scheme: light;
+    --background: #fff;
+    --text: #252a2e;
+    --heading: #20272d;
+    --muted: #596168;
+    --border: #dce0e3;
+    --link: #245b80;
+  }
+}

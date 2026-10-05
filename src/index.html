@@ -1,13 +1,37 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Portfolio</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      try {
+        const theme = localStorage.getItem('portfolio-theme');
+        if (theme === 'light' || theme === 'dark' || theme === 'system') {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
+    <title>Saad Kabir Uddin | Academic Portfolio</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Saad Kabir Uddin: software engineer pursuing PhD interests in Software Engineering, AI4SE, SE4AI, Software Architecture, Software Security and AI for Security, and Reliable AI-Enabled Software Systems, with a Computer Vision / ML research background."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Saad Kabir Uddin | Academic Portfolio" />
+    <meta
+      property="og:description"
+      content="Software Engineering, AI4SE, SE4AI, Software Architecture, Software Security and AI for Security, and Reliable AI-Enabled Software Systems research interests, supported by enterprise software experience and Computer Vision / ML research."
+    />
+    <meta property="og:url" content="https://saadkabiruddin.github.io/" />
+    <link rel="canonical" href="https://saadkabiruddin.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  </head>
+  <body>
+    <app-root></app-root>
+    <noscript
+      >Please enable JavaScript to view this academic portfolio. Contact:
+      uddin.saadkabir@gmail.com.</noscript
+    >
+  </body>
 </html>

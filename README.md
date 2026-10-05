@@ -1,59 +1,43 @@
-# Portfolio
+# saadkabiruddin.github.io
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.7.
+A minimal one-page academic homepage for PhD applications and research enquiries, built in the existing Angular 22 project with TypeScript, semantic HTML, and SCSS. No UI libraries, remote fonts, or tracking scripts.
 
-## Development server
+Live-site URL: https://saadkabiruddin.github.io/
 
-To start a local development server, run:
+## Local development
 
-```bash
-ng serve
+Use Node.js 26 (also used in CI) and npm. Install the locked dependencies:
+
+```sh
+npm ci
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open http://localhost:4200/. `npm start` runs `ng serve`. The development server uses `/`; production uses `/`.
 
-## Code scaffolding
+## Verification and production build
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```sh
+npm test -- --watch=false
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The production build writes to `dist/portfolio/browser`. `angular.json` sets the production base href to `/`. All sections use native fragment links on the same page; no separate routes or server rewrites are needed. Static files belong in `public/` and must use relative URLs.
 
-```bash
-ng generate --help
+## Deployment
+
+In the GitHub repository, select **Settings → Pages → Build and deployment → Source → GitHub Actions** once. `.github/workflows/deploy.yml` tests, builds, uploads the browser output, and deploys through the official GitHub Pages actions on every push to `main`. It can also be run manually from Actions. The workflow uses built-in token permissions and requires no custom secrets or `gh-pages` branch.
+
+Repository: https://github.com/saadkabiruddin/saadkabiruddin.github.io
+
+```sh
+git push origin main
 ```
 
-## Building
+See [GitHub’s custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
-To build the project run:
+## Updating content
 
-```bash
-ng build
-```
+Repeated content and links are in `src/app/portfolio.data.ts`; introductory, research, and education text is in `src/app/app.html`.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The site has no public CV download link. Share a CV directly with each recipient rather than placing it in `public/`.
