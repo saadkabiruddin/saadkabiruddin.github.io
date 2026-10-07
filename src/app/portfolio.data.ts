@@ -95,11 +95,12 @@ export const experience = [
     position: 'Software Engineer (Senior Technical Officer)',
     period: 'November 2024 – Present',
     responsibilities: [
-      'My work includes Core Banking System transaction logic and data-integrity workflows.',
-      'As primary developer and technical owner of the Case Management Application, I drove architecture, database design, backend APIs, legal-case workflows, integrations, and deployment, coordinating technical decisions with senior team members and business stakeholders.',
-      'I built Member Transfer and contributed to Cheque Book Management and reconciliation.',
-      'I develop and maintain enterprise banking applications with C#, ASP.NET Core, ASP.NET MVC, Angular, and SQL Server, applying modular design and separation of concerns.',
-      'I also contribute to Auth Gateway authentication, authorization, and identity workflows, alongside software reliability, data validation, access control, and production issue resolution.',
+      'Served as primary developer and technical owner of the Case Management Application, driving architecture, database design, backend APIs, legal-case workflows, integrations, and deployment. Coordinated technical decisions and delivery with senior team members and business stakeholders.',
+      'Built Member Transfer from scratch; contributed to Cheque Book Management and a reconciliation engine for reliable financial processing.',
+      'Developed and maintained enterprise applications in C#, ASP.NET Core, ASP.NET MVC, Angular, and SQL Server, using modular design and separation of concerns for maintainability.',
+      'Contributed authentication, authorization, secure access control, and identity workflows to the Auth Gateway.',
+      'Worked on banking application reliability, data validation, access control, and production issue resolution.',
+      'Contributing to the ongoing migration of legacy Core Banking modules to a new system using Clean Architecture and the Repository pattern.',
     ],
   },
   {
@@ -124,10 +125,10 @@ export const experience = [
 ];
 
 export const skills = [
-  { category: 'Programming Languages', items: 'Python, C#, C++, JavaScript, TypeScript, Rust, Go' },
+  { category: 'Programming Languages', items: 'C#, Python, C++, JavaScript, TypeScript, Rust, Go' },
   {
     category: 'Backend / Web',
-    items: 'ASP.NET Core, ASP.NET MVC, ASP.NET Framework, Angular, HTML, CSS, JWT',
+    items: 'ASP.NET Core, ASP.NET MVC, ASP.NET Framework, Angular',
   },
   { category: 'Databases', items: 'Microsoft SQL Server, PostgreSQL' },
   {
@@ -137,6 +138,6 @@ export const skills = [
   {
     category: 'Tools / Platforms',
     items:
-      'Git, Linux / Ubuntu, AWS, Jira, DBeaver, SQL Server Management Studio, Crystal Reports, Unity 2D',
+      'Git, Linux / Ubuntu, AWS, Jira, DBeaver, SQL Server Management Studio, Unity 2D',
   },
 ];
