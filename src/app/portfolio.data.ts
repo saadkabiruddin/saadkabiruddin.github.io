@@ -48,6 +48,17 @@ export const underReviewPublications = [
 
 export const projects = [
   {
+    title: 'Roslyn Security Analyzer',
+    description:
+      'Built a Roslyn-based static analyzer for security issues in ASP.NET Core Web APIs, with a deliberately vulnerable banking API as its evaluation target.',
+    details:
+      'Implemented RSA001 to detect SQL command text assembled through string concatenation or interpolation. On the documented benchmark, it found both planted SQL injection cases and raised no warnings on three parameterized-query controls; other vulnerability categories remain on the roadmap.',
+    technologies: 'C#, Roslyn, ASP.NET Core, SQLite, xUnit, Static Analysis',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/RoslynSecurityAnalyzer' },
+    ],
+  },
+  {
     title: 'RecWiz / Reconciliation Wizard',
     description:
       'Owned technical development of RecWiz, a reconciliation application using ASP.NET Core Web API and Angular, from architecture and backend design through implementation.',
