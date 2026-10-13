@@ -59,12 +59,15 @@ export const projects = [
     ],
   },
   {
-    title: 'RecWiz / Reconciliation Wizard',
+    title: 'LLM Agent Security Gateway (AgentGuard)',
     description:
-      'Owned technical development of RecWiz, a reconciliation application using ASP.NET Core Web API and Angular, from architecture and backend design through implementation.',
+      'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model.',
     details:
-      'Designed processing architecture with CQRS, MediatR, and EF Core; added JWT authentication, configurable source ingestion, batch processing, and record comparison.',
-    technologies: 'ASP.NET Core Web API, Angular, CQRS, MediatR, EF Core, JWT',
+      'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls and allowed 3/3 legitimate calls; role-only checks blocked 3/8 attacks. Separately evaluated prompt injection with two local LLMs in a small banking test environment.',
+    technologies: 'C#, ASP.NET Core, Python, Ollama, SQLite, LLM Security',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/LlmAgentSecurityGateway' },
+    ],
   },
   {
     title: 'Deep Learning Image Segmentation with PyTorch',
@@ -107,8 +110,9 @@ export const experience = [
     period: 'November 2024 – Present',
     responsibilities: [
       'Served as primary developer and technical owner of the Case Management Application, driving architecture, database design, backend APIs, legal-case workflows, integrations, and deployment. Coordinated technical decisions and delivery with senior team members and business stakeholders.',
-      'Built Member Transfer from scratch; contributed to Cheque Book Management and a reconciliation engine for reliable financial processing.',
-      'Developed and maintained enterprise applications in C#, ASP.NET Core, ASP.NET MVC, Angular, and SQL Server, using modular design and separation of concerns for maintainability.',
+      'Built Member Transfer from scratch; contributed to Cheque Book Management for banking operations.',
+      'Built RecWiz, a reconciliation application using CQRS and Clean Architecture.',
+      'Built an SMS gateway for sending SMS messages.',
       'Contributed authentication, authorization, secure access control, and identity workflows to the Auth Gateway.',
       'Worked on banking application reliability, data validation, access control, and production issue resolution.',
       'Contributing to the ongoing migration of legacy Core Banking modules to a new system using Clean Architecture and the Repository pattern.',
