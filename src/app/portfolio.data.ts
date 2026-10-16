@@ -112,7 +112,7 @@ export const experience = [
       'Served as primary developer and technical owner of the Case Management Application, driving architecture, database design, backend APIs, legal-case workflows, integrations, and deployment. Coordinated technical decisions and delivery with senior team members and business stakeholders.',
       'Built Member Transfer from scratch; contributed to Cheque Book Management for banking operations.',
       'Built RecWiz, a reconciliation application using CQRS and Clean Architecture.',
-      'Built an SMS gateway for sending SMS messages.',
+      'Developed a centralized SMS gateway for automated notifications across banking systems.',
       'Contributed authentication, authorization, secure access control, and identity workflows to the Auth Gateway.',
       'Worked on banking application reliability, data validation, access control, and production issue resolution.',
       'Contributing to the ongoing migration of legacy Core Banking modules to a new system using Clean Architecture and the Repository pattern.',
