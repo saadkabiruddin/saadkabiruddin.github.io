@@ -81,16 +81,6 @@ export const projects = [
     ],
   },
   {
-    title: 'Thalassemia Prediction with Machine Learning',
-    description:
-      'Explored thalassemia risk prediction using clinical and diagnostic features.',
-    details:
-      'Prepared features, compared models, and plotted their performance.',
-    technologies: 'Python, PyTorch, scikit-learn, Matplotlib, Pandas, NumPy',
-    notebook:
-      'https://colab.research.google.com/drive/1YXZuQIgNnTpWguKGgcrKjSUxn4CH6LLv?usp=drive_link',
-  },
-  {
     title: 'DeliveryDash',
     description:
       'Implemented player controls, collision-based interactions, delivery mechanics, and game-state logic in Unity and C#.',
@@ -111,6 +101,16 @@ export const projects = [
     technologies: 'Python, PyTorch, Albumentations, OpenCV',
     notebook:
       'https://colab.research.google.com/drive/1yWOlh09kseeSswBDAZEwQuDnvLYih22R?usp=drive_link',
+  },
+  {
+    title: 'Thalassemia Prediction with Machine Learning',
+    description:
+      'Explored thalassemia risk prediction using clinical and diagnostic features.',
+    details:
+      'Prepared features, compared models, and plotted their performance.',
+    technologies: 'Python, PyTorch, scikit-learn, Matplotlib, Pandas, NumPy',
+    notebook:
+      'https://colab.research.google.com/drive/1YXZuQIgNnTpWguKGgcrKjSUxn4CH6LLv?usp=drive_link',
   },
 ];
 
