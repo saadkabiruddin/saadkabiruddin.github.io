@@ -48,6 +48,17 @@ export const underReviewPublications = [
 
 export const projects = [
   {
+    title: 'ML Backdoor Security Lab',
+    description:
+      'Reproduced BadNets-style training-data poisoning in a PyTorch image classifier on MNIST and evaluated fine-pruning as a defense.',
+    details:
+      'In single-seed experiments, poisoning 1% of training data achieved 99.82% attack success with 99.01% clean accuracy. On the 10%-poisoned model, pruning 90% of the last convolutional layer’s channels and fine-tuning reduced attack success to 50.06% while retaining 97.90% clean accuracy, showing the defense’s limits in this setting.',
+    technologies: 'Python, PyTorch, torchvision, MNIST, Matplotlib, Jupyter',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/ml-backdoor-security-lab' },
+    ],
+  },
+  {
     title: 'Roslyn Security Analyzer',
     description:
       'Built a Roslyn-based static analyzer for security issues in ASP.NET Core Web APIs, with a deliberately vulnerable banking API as its evaluation target.',
@@ -70,16 +81,6 @@ export const projects = [
     ],
   },
   {
-    title: 'Deep Learning Image Segmentation with PyTorch',
-    description:
-      'Built a semantic segmentation pipeline with U-Net and an EfficientNet-B0 encoder.',
-    details:
-      'Prepared image and mask datasets, trained on a GPU for 25 epochs with Dice Loss and BCEWithLogitsLoss, and selected the best checkpoint by validation loss before running inference.',
-    technologies: 'Python, PyTorch, Albumentations, OpenCV',
-    notebook:
-      'https://colab.research.google.com/drive/1yWOlh09kseeSswBDAZEwQuDnvLYih22R?usp=drive_link',
-  },
-  {
     title: 'Thalassemia Prediction with Machine Learning',
     description:
       'Explored thalassemia risk prediction using clinical and diagnostic features.',
@@ -100,6 +101,16 @@ export const projects = [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/DeliveryDash' },
       { label: 'Live Demo', url: 'https://saadkabiruddin.github.io/DeliveryDash/' },
     ],
+  },
+  {
+    title: 'Deep Learning Image Segmentation with PyTorch',
+    description:
+      'Built a semantic segmentation pipeline with U-Net and an EfficientNet-B0 encoder.',
+    details:
+      'Prepared image and mask datasets, trained on a GPU for 25 epochs with Dice Loss and BCEWithLogitsLoss, and selected the best checkpoint by validation loss before running inference.',
+    technologies: 'Python, PyTorch, Albumentations, OpenCV',
+    notebook:
+      'https://colab.research.google.com/drive/1yWOlh09kseeSswBDAZEwQuDnvLYih22R?usp=drive_link',
   },
 ];
 
