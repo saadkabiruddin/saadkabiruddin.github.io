@@ -29,6 +29,7 @@ export class App {
 
   constructor() {
     afterNextRender(() => {
+      this.document.documentElement.dataset['theme'] = this.theme();
       const navigation = this.navigation().nativeElement;
       const updateHeight = () => {
         this.host.nativeElement.style.setProperty(
@@ -43,9 +44,18 @@ export class App {
     });
   }
 
-  protected readonly theme = signal(this.document.documentElement.dataset['theme'] || 'system');
+  protected readonly theme = signal<'light' | 'dark'>(this.initialTheme());
 
-  protected setTheme(theme: 'light' | 'dark' | 'system'): void {
+  private initialTheme(): 'light' | 'dark' {
+    const saved = this.document.documentElement.dataset['theme'];
+    if (saved === 'light' || saved === 'dark') return saved;
+    return this.document.defaultView?.matchMedia?.('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  }
+
+  protected toggleTheme(): void {
+    const theme = this.theme() === 'dark' ? 'light' : 'dark';
     this.theme.set(theme);
     this.document.documentElement.dataset['theme'] = theme;
     try {

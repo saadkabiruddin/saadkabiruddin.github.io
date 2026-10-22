@@ -6,41 +6,22 @@
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
-    <div class="theme-control" role="group" aria-label="Color theme">
+    <div class="theme-control">
       <button
         type="button"
-        [attr.aria-pressed]="theme() === 'light'"
-        (click)="setTheme('light')"
-        title="Use light theme"
+        (click)="toggleTheme()"
+        [attr.aria-label]="theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+        [title]="theme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
       >
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="4" />
-          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+          @if (theme() === 'dark') {
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+          } @else {
+            <path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z" />
+          }
         </svg>
-        <span>Light</span>
-      </button>
-      <button
-        type="button"
-        [attr.aria-pressed]="theme() === 'dark'"
-        (click)="setTheme('dark')"
-        title="Use dark theme"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z" />
-        </svg>
-        <span>Dark</span>
-      </button>
-      <button
-        type="button"
-        [attr.aria-pressed]="theme() === 'system'"
-        (click)="setTheme('system')"
-        title="Follow device theme"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="4" width="18" height="13" rx="2" />
-          <path d="M12 17v4m-4 0h8" />
-        </svg>
-        <span>System</span>
+        <span>{{ theme() === 'dark' ? 'Light' : 'Dark' }}</span>
       </button>
     </div>
   </nav>
@@ -182,7 +163,7 @@
       <article>
         <div class="entry-heading">
           <h3>Undergraduate Researcher</h3>
-          <p class="period">September 2022 – September 2023</p>
+          <p class="period">February 2022 – August 2023</p>
         </div>
         <p>Universiti Teknologi Malaysia</p>
         <p>
@@ -191,14 +172,17 @@
           >
         </p>
         <p>
-          Studied iris recognition when images were blurred, occluded, or unevenly lit.
+          Conducted undergraduate research under academic supervision within a grant-funded project. Investigated iris recognition when images were blurred, occluded, or unevenly lit.
         </p>
         <ul>
           <li>
             Read work on iris recognition, biometrics, image processing, and computer vision.
           </li>
           <li>
-            Worked with iris-image datasets, image preprocessing, and iris segmentation experiments.
+            Used Python, PyTorch, OpenCV, scikit-learn, Albumentations, and Matplotlib for image preprocessing, segmentation experiments, and evaluation.
+          </li>
+          <li>
+            Implemented a U-Net model for iris image segmentation.
           </li>
           <li>
             Compared results under different image degradations.
@@ -218,7 +202,7 @@
           <h3>Universiti Teknologi Malaysia (UTM)</h3>
           <p class="period">March 2020 – March 2024</p>
         </div>
-        <p>Bachelor of Computer Science · Software Engineering</p>
+        <p>Bachelor of Computer Science (Software Engineering)</p>
         <p class="secondary">Johor, Malaysia</p>
         <p>CGPA: 3.41 / 4.00</p>
         <p>Dean’s List — two semesters</p>

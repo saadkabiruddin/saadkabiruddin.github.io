@@ -102,16 +102,7 @@ export const projects = [
     notebook:
       'https://colab.research.google.com/drive/1yWOlh09kseeSswBDAZEwQuDnvLYih22R?usp=drive_link',
   },
-  {
-    title: 'Thalassemia Prediction with Machine Learning',
-    description:
-      'Explored thalassemia risk prediction using clinical and diagnostic features.',
-    details:
-      'Prepared features, compared models, and plotted their performance.',
-    technologies: 'Python, PyTorch, scikit-learn, Matplotlib, Pandas, NumPy',
-    notebook:
-      'https://colab.research.google.com/drive/1YXZuQIgNnTpWguKGgcrKjSUxn4CH6LLv?usp=drive_link',
-  },
+
 ];
 
 export const experience = [
@@ -122,11 +113,12 @@ export const experience = [
     responsibilities: [
       'Served as primary developer and technical owner of the Case Management Application, driving architecture, database design, backend APIs, legal-case workflows, integrations, and deployment. Coordinated technical decisions and delivery with senior team members and business stakeholders.',
       'Built Member Transfer from scratch; contributed to Cheque Book Management for banking operations.',
-      'Built RecWiz, a reconciliation application using CQRS and Clean Architecture.',
+      'Built RecWiz using ASP.NET Core Web API, Angular, TypeScript, CQRS, MediatR, and EF Core. Implemented reconciliation workflows, file processing, API integration, and result management with modular architecture.',
       'Developed a centralized SMS gateway for automated notifications across banking systems.',
       'Contributed authentication, authorization, secure access control, and identity workflows to the Auth Gateway.',
       'Worked on banking application reliability, data validation, access control, and production issue resolution.',
       'Contributing to the ongoing migration of legacy Core Banking modules to a new system using Clean Architecture and the Repository pattern.',
+      'Maintained and supported an internal Email Gateway built with Python, FastAPI, React, Next.js, and SQL Server, contributing to enterprise system integration and application reliability.',
     ],
   },
   {
@@ -135,7 +127,7 @@ export const experience = [
     period: 'September 2024 – October 2024',
     responsibilities: [
       'Built C# authentication features with password hashing and salting, JWT, and session management.',
-      'Connected Angular components to backend workflows.',
+      'Connected React.js components to backend workflows.',
     ],
   },
   {
@@ -143,8 +135,9 @@ export const experience = [
     position: 'Software Developer Intern',
     period: 'September 2023 – February 2024',
     responsibilities: [
-      'Investigated PostgreSQL data issues in ERP software.',
-      'Supported AWS server operations.',
+      'Contributed to ERP software development using Java and Spring Boot for backend functionality and Angular for the frontend, supporting enterprise business workflows.',
+      'Investigated and corrected PostgreSQL data issues in ERP software.',
+      'Supported AWS server operations and production troubleshooting.',
       'Tested ERP workflows and validated data consistency between backend APIs and the frontend.',
     ],
   },
@@ -154,7 +147,7 @@ export const skills = [
   { category: 'Programming Languages', items: 'C#, Python, C++, JavaScript, TypeScript, Rust, Go' },
   {
     category: 'Backend / Web',
-    items: 'ASP.NET Core, ASP.NET MVC, ASP.NET Framework, Angular',
+    items: 'ASP.NET Core, FastAPI, Angular, React, Next.js; NestJS',
   },
   { category: 'Databases', items: 'Microsoft SQL Server, PostgreSQL' },
   {
