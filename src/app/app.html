@@ -40,6 +40,8 @@
         security, AI/LLM security and privacy, and cyber-physical systems (CPS). I am particularly
         interested in improving the security, safety, and reliability of software and AI-enabled
         systems, including autonomous systems and UAVs.
+        I am also interested in how these guarantees hold further down the stack, in operating
+        systems, embedded platforms, and real-time systems.
       </p>
       <div class="links">
         <a href="mailto:uddin.saadkabir@gmail.com">Email</a>
@@ -56,51 +58,27 @@
     <section id="research">
       <h2>Research Interests</h2>
       <p>
-        My research interests span software engineering, software security, and AI/LLM security and
-        privacy. I am particularly interested in software testing, vulnerability analysis,
-        AI-assisted software development, and improving the security and reliability of AI-enabled
-        systems. I am also exploring software engineering challenges in cyber-physical and autonomous
-        systems, particularly UAVs, with an emphasis on safety, security, and dependable operation.
+        My research interests span software security, AI/LLM security and privacy, and systems security. I am particularly interested in vulnerability analysis, software supply chain security, and the security and privacy of LLM agents, including permissions, provenance, and isolation. I am also interested in how security and reliability guarantees hold further down the stack, in operating systems, embedded platforms, and real-time and cyber-physical systems. More broadly, I am interested in software engineering, including software testing and AI-assisted software development.
       </p>
       <p>
-        <strong>Software Security · AI/LLM Security and Privacy · Cyber-Physical Systems (CPS) ·
-        Software Engineering · AI for Software Engineering (AI4SE)</strong>
+        <strong>Software Security · AI/LLM Security and Privacy ·
+        Systems Security · Software Engineering</strong>
       </p>
       <article>
         <h3>Software Security and Vulnerability Analysis</h3>
-        <p>
-          My primary research interest is understanding how vulnerabilities arise in software systems
-          and developing techniques to identify, analyze, and mitigate them. I am particularly
-          interested in static and dynamic program analysis, vulnerability detection, security
-          testing, authentication and authorization security, and automated security analysis.
-        </p>
+        <p>Secure software development, software supply chain and open-source security, and vulnerability detection.</p>
       </article>
       <article>
         <h3>AI/LLM Security and Privacy</h3>
-        <p>
-          I am interested in investigating security and privacy vulnerabilities in AI-enabled systems,
-          particularly large language models. My interests include adversarial attacks, backdoor
-          attacks, prompt injection, and developing techniques to evaluate and improve the security,
-          privacy, and trustworthiness of AI-driven applications.
-        </p>
+        <p>Security and privacy of LLM agents: permissions, provenance, and isolation.</p>
       </article>
       <article>
-        <h3>Cyber-Physical and Autonomous Systems</h3>
-        <p>
-          I am developing a research interest in cyber-physical systems, particularly UAVs and
-          autonomous systems. I am interested in software safety, runtime monitoring, fault detection,
-          real-time systems security, and the application of AI techniques to improve the reliability
-          and security of autonomous operations.
-        </p>
+        <h3>Systems Security</h3>
+        <p>Real-time and cyber-physical systems, operating systems, and embedded systems.</p>
       </article>
       <article>
-        <h3>Software Engineering and AI4SE</h3>
-        <p>
-          My interests also include software testing, program analysis, software architecture, and
-          AI-assisted software development. I am particularly interested in using machine learning
-          and large language models for automated code analysis, bug detection, program comprehension,
-          and software repair while maintaining software quality and reliability.
-        </p>
+        <h3>Software Engineering</h3>
+        <p>Software testing, program analysis, and AI-assisted software development.</p>
       </article>
     </section>
     <section id="publications">
@@ -210,23 +188,28 @@
     </section>
     <section id="projects">
       <h2>Selected Projects</h2>
-      @for (project of projects; track project.title) {
-        <article>
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.description }}</p>
-          <p>{{ project.details }}</p>
-          <p class="secondary">{{ project.technologies }}</p>
-          <div class="links">
-            @if (project.notebook) {
-              <a [href]="project.notebook" [attr.aria-label]="'Colab notebook: ' + project.title"
-                >Colab notebook</a
-              >
-            }
-            @for (link of project.links ?? []; track link.url) {
-              <a [href]="link.url" [attr.aria-label]="link.label + ': ' + project.title">{{ link.label }}</a>
-            }
-          </div>
-        </article>
+      @for (group of projectGroups; track group.label) {
+        @if (group.label === 'Other') {
+          <h3>Other</h3>
+        }
+        @for (project of group.projects; track project.title) {
+          <article>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <p>{{ project.details }}</p>
+            <p class="secondary">{{ project.technologies }}</p>
+            <div class="links">
+              @if (project.notebook) {
+                <a [href]="project.notebook" [attr.aria-label]="'Colab notebook: ' + project.title"
+                  >Colab notebook</a
+                >
+              }
+              @for (link of project.links ?? []; track link.url) {
+                <a [href]="link.url" [attr.aria-label]="link.label + ': ' + project.title">{{ link.label }}</a>
+              }
+            </div>
+          </article>
+        }
       }
     </section>
     <section id="experience">

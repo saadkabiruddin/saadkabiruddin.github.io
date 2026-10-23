@@ -48,17 +48,6 @@ export const underReviewPublications = [
 
 export const projects = [
   {
-    title: 'ML Backdoor Security Lab',
-    description:
-      'Reproduced BadNets-style training-data poisoning in a PyTorch image classifier on MNIST and evaluated fine-pruning as a defense.',
-    details:
-      'In single-seed experiments, poisoning 1% of training data achieved 99.82% attack success with 99.01% clean accuracy. On the 10%-poisoned model, pruning 90% of the last convolutional layer’s channels and fine-tuning reduced attack success to 50.06% while retaining 97.90% clean accuracy, showing the defense’s limits in this setting.',
-    technologies: 'Python, PyTorch, torchvision, MNIST, Matplotlib, Jupyter',
-    links: [
-      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/ml-backdoor-security-lab' },
-    ],
-  },
-  {
     title: 'Roslyn Security Analyzer',
     description:
       'Built a Roslyn-based static analyzer for security issues in ASP.NET Core Web APIs, with a deliberately vulnerable banking API as its evaluation target.',
@@ -81,15 +70,14 @@ export const projects = [
     ],
   },
   {
-    title: 'DeliveryDash',
+    title: 'ML Backdoor Security Lab',
     description:
-      'Implemented player controls, collision-based interactions, delivery mechanics, and game-state logic in Unity and C#.',
+      'Reproduced BadNets-style training-data poisoning in a PyTorch image classifier on MNIST and evaluated fine-pruning as a defense.',
     details:
-      'Built and deployed the completed game as a Unity WebGL application through GitHub Pages.',
-    technologies: 'Unity 2D, C#',
+      'In single-seed experiments, poisoning 1% of training data achieved 99.82% attack success with 99.01% clean accuracy. On the 10%-poisoned model, pruning 90% of the last convolutional layer’s channels and fine-tuning reduced attack success to 50.06% while retaining 97.90% clean accuracy, showing the defense’s limits in this setting.',
+    technologies: 'Python, PyTorch, torchvision, MNIST, Matplotlib, Jupyter',
     links: [
-      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/DeliveryDash' },
-      { label: 'Live Demo', url: 'https://saadkabiruddin.github.io/DeliveryDash/' },
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/ml-backdoor-security-lab' },
     ],
   },
   {
@@ -102,7 +90,18 @@ export const projects = [
     notebook:
       'https://colab.research.google.com/drive/1yWOlh09kseeSswBDAZEwQuDnvLYih22R?usp=drive_link',
   },
-
+  {
+    title: 'DeliveryDash',
+    description:
+      'Implemented player controls, collision-based interactions, delivery mechanics, and game-state logic in Unity and C#.',
+    details:
+      'Built and deployed the completed game as a Unity WebGL application through GitHub Pages.',
+    technologies: 'Unity 2D, C#',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/DeliveryDash' },
+      { label: 'Live Demo', url: 'https://saadkabiruddin.github.io/DeliveryDash/' },
+    ],
+  },
 ];
 
 export const experience = [
@@ -144,7 +143,8 @@ export const experience = [
 ];
 
 export const skills = [
-  { category: 'Programming Languages', items: 'C#, Python, C++, JavaScript, TypeScript, Rust, Go' },
+  { category: 'Systems', items: 'C, C++, Rust' },
+  { category: 'Programming Languages', items: 'C#, Python, JavaScript, TypeScript, Go' },
   {
     category: 'Backend / Web',
     items: 'ASP.NET Core, FastAPI, Angular, React, Next.js; NestJS',
@@ -157,6 +157,6 @@ export const skills = [
   {
     category: 'Tools / Platforms',
     items:
-      'Git, Linux / Ubuntu, AWS, Jira, DBeaver, SQL Server Management Studio, Unity 2D',
+      'Linux / Ubuntu, Git, AWS, Jira, DBeaver, SQL Server Management Studio, Unity 2D',
   },
 ];
