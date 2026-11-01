@@ -2,10 +2,23 @@
 <div class="page" id="top">
   <nav #navigation aria-label="Main navigation">
     <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#education">Education</a>
+    <a class="desktop-nav-link" href="#publications">Publications</a>
+    <a class="desktop-nav-link" href="#education">Education</a>
     <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
+    <a class="desktop-nav-link" href="#experience">Experience</a>
+    <details class="nav-more" #moreMenu (keydown.escape)="closeMoreMenu(true)" (focusout)="onMoreFocusOut($event)">
+      <summary #moreToggle>More</summary>
+      <div class="nav-menu" (click)="navigateFromMore($event)">
+        <a class="mobile-nav-link" href="#publications">Publications</a>
+        <a class="mobile-nav-link" href="#education">Education</a>
+        <a class="mobile-nav-link" href="#experience">Experience</a>
+        <a href="#research-experience">Research Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#service-activities">Awards, Service &amp; Activities</a>
+        <a href="#certification">Certifications</a>
+        <a href="#language-proficiency">Languages</a>
+      </div>
+    </details>
     <div class="theme-control">
       <button
         type="button"
@@ -33,15 +46,15 @@
         alongside an academic research background in machine learning and computer vision.
       </p>
       <p>
-        After completing my undergraduate degree in Computer Science, I chose to pursue a career in
-        industry to bridge the gap between theoretical knowledge and real-world software engineering.
-        Working on complex, security-sensitive applications has given me practical insight into the
-        challenges of building dependable systems and motivated me to explore research in software
-        security, AI/LLM security and privacy, and cyber-physical systems (CPS). I am particularly
-        interested in improving the security, safety, and reliability of software and AI-enabled
-        systems, including autonomous systems and UAVs.
-        I am also interested in how these guarantees hold further down the stack, in operating
-        systems, embedded platforms, and real-time systems.
+        After completing my undergraduate degree in Computer Science, I chose to
+        work in industry to bridge the gap between theory and real-world software
+        engineering. Building security-sensitive banking systems showed me how hard
+        it is to make software dependable, and led me to research in systems
+        security. I am interested in two threads: the security of real-time and
+        cyber-physical systems, such as UAVs, down through operating systems and
+        embedded platforms; and the security of software and LLM agents, from
+        vulnerabilities in application code to the permissions, provenance, and
+        privacy of agents that call tools.
       </p>
       <div class="links">
         <a href="mailto:uddin.saadkabir@gmail.com">Email</a>
@@ -58,27 +71,15 @@
     <section id="research">
       <h2>Research Interests</h2>
       <p>
-        My research interests span software security, AI/LLM security and privacy, and systems security. I am particularly interested in vulnerability analysis, software supply chain security, and the security and privacy of LLM agents, including permissions, provenance, and isolation. I am also interested in how security and reliability guarantees hold further down the stack, in operating systems, embedded platforms, and real-time and cyber-physical systems. More broadly, I am interested in software engineering, including software testing and AI-assisted software development.
-      </p>
-      <p>
-        <strong>Software Security · AI/LLM Security and Privacy ·
-        Systems Security · Software Engineering</strong>
+        My research is in systems security, along two threads.
       </p>
       <article>
-        <h3>Software Security and Vulnerability Analysis</h3>
-        <p>Secure software development, software supply chain and open-source security, and vulnerability detection.</p>
+        <h3>Real-Time and Cyber-Physical Systems Security</h3>
+        <p>How scheduling, timing, and OS-level mechanisms on embedded platforms affect the safety and security of cyber-physical systems such as UAVs.</p>
       </article>
       <article>
-        <h3>AI/LLM Security and Privacy</h3>
-        <p>Security and privacy of LLM agents: permissions, provenance, and isolation.</p>
-      </article>
-      <article>
-        <h3>Systems Security</h3>
-        <p>Real-time and cyber-physical systems, operating systems, and embedded systems.</p>
-      </article>
-      <article>
-        <h3>Software Engineering</h3>
-        <p>Software testing, program analysis, and AI-assisted software development.</p>
+        <h3>Software and LLM Agent Security</h3>
+        <p>Finding vulnerabilities in application code through static analysis, and enforcing permissions, provenance, isolation, and privacy for LLM agents that call tools.</p>
       </article>
     </section>
     <section id="publications">
@@ -141,7 +142,7 @@
       <article>
         <div class="entry-heading">
           <h3>Undergraduate Researcher</h3>
-          <p class="period">February 2022 – September 2023</p>
+          <p class="period">September 2022 – September 2023</p>
         </div>
         <p>Universiti Teknologi Malaysia</p>
         <p>

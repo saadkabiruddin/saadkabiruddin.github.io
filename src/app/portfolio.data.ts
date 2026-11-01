@@ -48,6 +48,17 @@ export const underReviewPublications = [
 
 export const projects = [
   {
+    title: 'ESP32 FreeRTOS Priority Inversion Experiment',
+    description:
+      'Built a controlled real-time scheduling experiment in C with ESP-IDF and FreeRTOS to measure priority inversion and evaluate priority inheritance.',
+    details:
+      'Compared binary semaphores and mutexes with medium-priority interference enabled and disabled. In Wokwi simulation, the mutex reduced mean high-priority lock wait from 339.3 ms to 89.7 ms (73.6%) and 200 ms deadline misses from 95/95 to 0/95 under interference. Results cover 95 measured cycles per condition after warmup in a deterministic scenario; physical ESP32 validation is pending.',
+    technologies: 'C, ESP32, ESP-IDF, FreeRTOS, Wokwi, Real-Time Scheduling',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/esp32-freertos-realtime' },
+    ],
+  },
+  {
     title: 'Roslyn Security Analyzer',
     description:
       'Built a Roslyn-based static analyzer for security issues in ASP.NET Core Web APIs, with a deliberately vulnerable banking API as its evaluation target.',
@@ -61,7 +72,7 @@ export const projects = [
   {
     title: 'LLM Agent Security Gateway (AgentGuard)',
     description:
-      'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model.',
+      'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model, and blocking personal data returned by banking tools from flowing into outbound tools.',
     details:
       'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls and allowed 3/3 legitimate calls; role-only checks blocked 3/8 attacks. Separately evaluated prompt injection with two local LLMs in a small banking test environment.',
     technologies: 'C#, ASP.NET Core, Python, Ollama, SQLite, LLM Security',
@@ -147,7 +158,7 @@ export const skills = [
   { category: 'Programming Languages', items: 'C#, Python, JavaScript, TypeScript, Go' },
   {
     category: 'Backend / Web',
-    items: 'ASP.NET Core, FastAPI, Angular, React, Next.js; NestJS',
+    items: 'ASP.NET Core, FastAPI, Angular',
   },
   { category: 'Databases', items: 'Microsoft SQL Server, PostgreSQL' },
   {
