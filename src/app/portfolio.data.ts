@@ -72,9 +72,9 @@ export const projects = [
   {
     title: 'LLM Agent Security Gateway (AgentGuard)',
     description:
-      'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model, and blocking personal data returned by banking tools from flowing into outbound tools.',
+      'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model.',
     details:
-      'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls and allowed 3/3 legitimate calls; role-only checks blocked 3/8 attacks. Separately evaluated prompt injection with two local LLMs in a small banking test environment.',
+      'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls, including data theft and transfers hidden inside legitimate requests, and allowed 3/3 legitimate calls; role-only checks blocked 3/8. Under prompt-injection attacks in a small banking test environment, both local LLMs resisted on their own, showing why enforcement should not depend on model behavior.',
     technologies: 'C#, ASP.NET Core, Python, Ollama, SQLite, LLM Security',
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/LlmAgentSecurityGateway' },
@@ -121,6 +121,7 @@ export const experience = [
     position: 'Software Engineer (Senior Technical Officer)',
     period: 'November 2024 – Present',
     responsibilities: [
+      'Conducted research and development (R&D) on API testing and performance evaluation using Postman.',
       'Served as primary developer and technical owner of the Case Management Application, driving architecture, database design, backend APIs, legal-case workflows, integrations, and deployment. Coordinated technical decisions and delivery with senior team members and business stakeholders.',
       'Built Member Transfer from scratch; contributed to Cheque Book Management for banking operations.',
       'Built RecWiz using ASP.NET Core Web API, Angular, TypeScript, CQRS, MediatR, and EF Core. Implemented reconciliation workflows, file processing, API integration, and result management with modular architecture.',
