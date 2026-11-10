@@ -48,6 +48,17 @@ export const underReviewPublications = [
 
 export const projects = [
   {
+    title: 'LoopShield — Sensor Spoofing Detection for Networked Control Systems',
+    description:
+      'Built a temperature-control security testbed with a simulated room, MQTT attack proxy, and automated evaluation harness.',
+    details:
+      'Implemented HMAC authentication, replay protection, and physics-based anomaly detection using a model observer and CUSUM. Evaluated four defense configurations across seven scenarios; combined defenses detected bias, ramp, and forgery attacks within 0.2 seconds in preliminary host-based trials.',
+    technologies: 'C, C#, Python, MQTT; ESP32/FreeRTOS target',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/loopshield' },
+    ],
+  },
+  {
     title: 'ESP32 FreeRTOS Priority Inversion Experiment',
     description:
       'Built a controlled real-time scheduling experiment in C with ESP-IDF and FreeRTOS to measure priority inversion and evaluate priority inheritance.',
@@ -74,7 +85,7 @@ export const projects = [
     description:
       'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model.',
     details:
-      'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls, including data theft and transfers hidden inside legitimate requests, and allowed 3/3 legitimate calls; role-only checks blocked 3/8. Under prompt-injection attacks in a small banking test environment, both local LLMs resisted on their own, showing why enforcement should not depend on model behavior.',
+      'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls, including data theft and transfers hidden inside legitimate requests, and allowed 3/3 legitimate calls; role-only checks blocked 3/8.',
     technologies: 'C#, ASP.NET Core, Python, Ollama, SQLite, LLM Security',
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/LlmAgentSecurityGateway' },
@@ -124,21 +135,12 @@ export const experience = [
       'Conducted research and development (R&D) on API testing and performance evaluation using Postman.',
       'Served as primary developer and technical owner of the Case Management Application, driving architecture, database design, backend APIs, legal-case workflows, integrations, and deployment. Coordinated technical decisions and delivery with senior team members and business stakeholders.',
       'Built Member Transfer from scratch; contributed to Cheque Book Management for banking operations.',
-      'Built RecWiz using ASP.NET Core Web API, Angular, TypeScript, CQRS, MediatR, and EF Core. Implemented reconciliation workflows, file processing, API integration, and result management with modular architecture.',
+      'Built RecWiz using ASP.NET Core Web API, Angular, TypeScript, CQRS, and EF Core. Implemented reconciliation workflows, file processing, API integration, and result management with modular architecture.',
       'Developed a centralized SMS gateway for automated notifications across banking systems.',
       'Contributed authentication, authorization, secure access control, and identity workflows to the Auth Gateway.',
       'Worked on banking application reliability, data validation, access control, and production issue resolution.',
       'Contributing to the ongoing migration of legacy Core Banking modules to a new system using Clean Architecture and the Repository pattern.',
       'Maintained and supported an internal Email Gateway built with Python, FastAPI, React, Next.js, and SQL Server, contributing to enterprise system integration and application reliability.',
-    ],
-  },
-  {
-    organization: 'Itransition',
-    position: '.NET Development Training Program · Remote',
-    period: 'September 2024 – October 2024',
-    responsibilities: [
-      'Built C# authentication features with password hashing and salting, JWT, and session management.',
-      'Connected React.js components to backend workflows.',
     ],
   },
   {
@@ -156,6 +158,7 @@ export const experience = [
 
 export const skills = [
   { category: 'Systems', items: 'C, C++, Rust' },
+  { category: 'Embedded', items: 'ESP-IDF, FreeRTOS, MQTT, Wokwi' },
   { category: 'Programming Languages', items: 'C#, Python, JavaScript, TypeScript, Go' },
   {
     category: 'Backend / Web',
