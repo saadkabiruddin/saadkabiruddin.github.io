@@ -61,9 +61,9 @@ export const projects = [
   {
     title: 'LoopShield — Sensor Spoofing Detection for Networked Control Systems',
     description:
-      'Built a temperature-control security testbed with a simulated room, MQTT attack proxy, and automated evaluation harness.',
+      'Built a temperature-control security testbed with a C# room/heater simulation, MQTT attack proxy, and automated evaluation harness connected through a local C# broker built with MQTTnet.Server.',
     details:
-      'Implemented HMAC authentication, replay protection, and physics-based anomaly detection using a model observer and CUSUM. Evaluated four defense configurations across seven scenarios; combined defenses detected bias, ramp, and forgery attacks within 0.2 seconds in preliminary host-based trials.',
+      'Implemented portable C defense modules for HMAC authentication, replay protection, and physics-based anomaly detection using a model observer and CUSUM. Used Python to analyze four defense configurations across seven scenarios; combined defenses detected bias, ramp, and forgery attacks within 0.2 seconds in preliminary host-based trials.',
     technologies: 'C, C#, Python, MQTT; ESP32/FreeRTOS target',
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/loopshield' },
@@ -107,7 +107,7 @@ export const projects = [
     description:
       'Reproduced BadNets-style training-data poisoning in a PyTorch image classifier on MNIST and evaluated fine-pruning as a defense.',
     details:
-      'In single-seed experiments, poisoning 1% of training data achieved 99.82% attack success with 99.01% clean accuracy. On the 10%-poisoned model, pruning 90% of the last convolutional layer’s channels and fine-tuning reduced attack success to 50.06% while retaining 97.90% clean accuracy, showing the defense’s limits in this setting.',
+      'In single-seed experiments, poisoning 1% of training data achieved 99.82% attack success with 99.01% clean accuracy. In a separate defense experiment using the saved 10%-poisoned model (100% attack success, 99.00% clean accuracy), pruning 90% of the last convolutional layer’s channels and fine-tuning reduced attack success to 50.06% while retaining 97.90% clean accuracy, showing the defense’s limits in this setting.',
     technologies: 'Python, PyTorch, torchvision, MNIST, Matplotlib, Jupyter',
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/ml-backdoor-security-lab' },
@@ -143,13 +143,13 @@ export const experience = [
     position: 'Software Engineer (Senior Technical Officer)',
     period: 'November 2024 – Present',
     responsibilities: [
-      'Conducted research and development (R&D) on API testing and performance evaluation using Postman.',
+      "Enforced branch-level record access from the authenticated user's identity rather than a caller-supplied branch code.",
       'Served as primary developer and technical owner of the Case Management Application, driving architecture, database design, backend APIs, legal-case workflows, integrations, and deployment. Coordinated technical decisions and delivery with senior team members and business stakeholders.',
       'Built Member Transfer from scratch; contributed to Cheque Book Management for banking operations.',
       'Built RecWiz using ASP.NET Core Web API, Angular, TypeScript, CQRS, and EF Core. Implemented reconciliation workflows, file processing, API integration, and result management with modular architecture.',
       'Developed a centralized SMS gateway for automated notifications across banking systems.',
       'Contributed authentication, authorization, secure access control, and identity workflows to the Auth Gateway.',
-      'Worked on banking application reliability, data validation, access control, and production issue resolution.',
+      'Worked on banking application reliability, data validation, and production issue resolution.',
       'Contributing to the ongoing migration of legacy Core Banking modules to a new system using Clean Architecture and the Repository pattern.',
       'Maintained and supported an internal Email Gateway built with Python, FastAPI, React, Next.js, and SQL Server, contributing to enterprise system integration and application reliability.',
     ],
@@ -183,6 +183,6 @@ export const skills = [
   {
     category: 'Tools / Platforms',
     items:
-      'Linux / Ubuntu, Git, AWS, Jira, DBeaver, SQL Server Management Studio, Unity 2D',
+      'Linux, Git, AWS, Jira, DBeaver, SQL Server Management Studio, Unity 2D',
   },
 ];
