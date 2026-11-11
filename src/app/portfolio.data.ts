@@ -48,24 +48,17 @@ export const underReviewPublications = [
 
 export const projects = [
   {
-<<<<<<< HEAD
-    title: 'Replay Lock — Replay Protection Across Receiver Restarts',
-    description:
-      'Built a smart-lock protocol testbed comparing unprotected, HMAC-authenticated RAM-counter, and persistent-counter receivers.',
-    details:
-      'Across 20 host trials per mode, only the persistent counter rejected captured commands after a receiver restart. The Python reference and ESP32 firmware agreed on all 49 parity inputs; firmware builds for ESP32, but physical hardware testing is pending.',
-=======
     title: 'Replay Lock — Replay Protection Across Restarts',
     description:
-      'Built a smart-lock protocol testbed comparing unprotected, in-memory-counter, and persistent-counter receivers against replay, message modification, and receiver restarts.',
+      'Built an ESP32 security experiment comparing unprotected, RAM-counter, and persistent-counter receivers against replay, modification, and restart scenarios.',
     details:
-      'Across 20 host trials per mode, HMAC-SHA256 with a RAM counter rejected replay until restart; persisting the counter before acting also rejected replay after restart. Python and ESP32 firmware agreed on all 49 test inputs. Host timing measured about 0.18 ms for accepted persistent writes versus 0.04 ms for the RAM counter; ESP32 hardware validation is pending.',
->>>>>>> be8072a (s)
+      'Only persistent counters rejected replay after restart in all 20 host trials. Python and ESP32 firmware agreed on all 49 test inputs; hardware validation is pending.',
     technologies: 'Python, C, ESP-IDF, ESP32, HMAC-SHA256, NVS',
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/replay-lock' },
     ],
   },
+  
   {
     title: 'LoopShield — Sensor Spoofing Detection for Networked Control Systems',
     description:
