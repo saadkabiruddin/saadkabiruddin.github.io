@@ -140,7 +140,7 @@ export const projects = [
 
 export const experience = [
   {
-    organization: 'Dhaka Mercantile Co-operative Bank Ltd.',
+    organization: 'The Dhaka Mercantile Co-operative Bank Ltd.',
     position: 'Software Engineer (Senior Technical Officer)',
     period: 'November 2024 – Present',
     responsibilities: [
