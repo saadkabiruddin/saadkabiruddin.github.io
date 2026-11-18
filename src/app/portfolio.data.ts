@@ -39,9 +39,9 @@ export const publications = [
 
 export const projects = [
   {
-    title: 'Replay Lock — Replay Protection Across Restarts',
+    title: 'Replay Lock — Replay Protection as a Protocol-State Problem Across Restarts',
     description:
-      'Built an ESP32 security experiment comparing unprotected, RAM-counter, and persistent-counter receivers against replay, modification, and restart scenarios.',
+      'Identified how a RAM-held replay counter resets on restart, returning the receiver to an earlier protocol state where previously captured messages can be accepted again.',
     details:
       'Only persistent counters rejected replay after restart in all 20 host trials. Python and ESP32 firmware agreed on all 49 test inputs; hardware validation is pending.',
     technologies: 'Python, C, ESP-IDF, ESP32, HMAC-SHA256, NVS',
@@ -53,7 +53,7 @@ export const projects = [
   {
     title: 'LoopShield — Sensor Spoofing Detection for Networked Control Systems',
     description:
-      'Built a temperature-control security testbed with a C# room/heater simulation, MQTT attack proxy, and automated evaluation harness connected through a local C# broker built with MQTTnet.Server.',
+      'Built an MQTT attack proxy that injects bias, ramp, and forged messages into a simulated control loop, with a C# temperature-control simulation and local MQTTnet.Server broker.',
     details:
       'Implemented portable C defense modules for HMAC authentication, replay protection, and physics-based anomaly detection using a model observer and CUSUM. Used Python to analyze four defense configurations across seven scenarios; combined defenses detected bias, ramp, and forgery attacks within 0.2 seconds in preliminary host-based trials.',
     technologies: 'C, C#, Python, MQTT; ESP32/FreeRTOS target',
@@ -160,9 +160,9 @@ export const experience = [
 ];
 
 export const skills = [
-  { category: 'Systems', items: 'C, C++, Rust' },
+  { category: 'Systems Programming', items: 'C, C++, Rust' },
   { category: 'Embedded', items: 'ESP-IDF, FreeRTOS, MQTT, Wokwi' },
-  { category: 'Programming Languages', items: 'C#, Python, JavaScript, TypeScript, Go' },
+  { category: 'Programming Languages', items: 'C#, Python, TypeScript, JavaScript' },
   {
     category: 'Backend / Web',
     items: 'ASP.NET Core, FastAPI, Angular',
