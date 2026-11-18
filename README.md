@@ -1,6 +1,6 @@
 # saadkabiruddin.github.io
 
-A minimal one-page academic homepage for research enquiries, built in the existing Angular 22 project with TypeScript, semantic HTML, and SCSS. No UI libraries, remote fonts, or tracking scripts.
+A one-page software security and systems portfolio for professional and research enquiries, built in the existing Angular 22 project with TypeScript, semantic HTML, and SCSS. No UI libraries, remote fonts, or tracking scripts.
 
 Live-site URL: https://saadkabiruddin.github.io/
 
