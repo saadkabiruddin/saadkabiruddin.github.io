@@ -12,7 +12,6 @@ import {
   experience,
   projects,
   publications,
-  underReviewPublications,
   skills,
 } from './portfolio.data';
 
@@ -99,7 +98,6 @@ export class App {
   }
 
   protected readonly publications = publications;
-  protected readonly underReviewPublications = underReviewPublications;
   protected readonly projectGroups = [
     { label: 'Research', projects: projects.filter(project => project.title !== 'DeliveryDash') },
     { label: 'Other', projects: projects.filter(project => project.title === 'DeliveryDash') },

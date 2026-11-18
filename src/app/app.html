@@ -72,16 +72,8 @@
     <section id="research">
       <h2>Research Interests</h2>
       <p>
-        My research is in systems security, along two threads.
+        Embedded and Wireless Firmware Security · Cyber-Physical and Real-Time Systems Security · AI-Agent Security · Software Security and Program Analysis
       </p>
-      <article>
-        <h3>Real-Time and Cyber-Physical Systems Security</h3>
-        <p>How scheduling, timing, and OS-level mechanisms on embedded platforms affect the safety and security of cyber-physical systems such as UAVs.</p>
-      </article>
-      <article>
-        <h3>Software and LLM Agent Security</h3>
-        <p>Finding vulnerabilities in application code through static analysis, and enforcing permissions, provenance, isolation, and privacy for LLM agents that call tools.</p>
-      </article>
     </section>
     <section id="publications">
       <h2>Publications</h2>
@@ -114,27 +106,6 @@
               }}</a>
             }
           </div>
-        </article>
-      }
-      @for (publication of underReviewPublications; track publication.title) {
-        <article>
-          <h3>{{ publication.title }}</h3>
-          <p>
-            @for (author of publication.authors; track author; let last = $last) {
-              <span>
-                @if (author === 'Saad Kabir Uddin') {
-                  <strong>{{ author }}</strong>
-                } @else {
-                  {{ author }}
-                }
-                @if (!last) {
-                  ,
-                }
-              </span>
-            }
-          </p>
-          <p><cite>{{ publication.venue }}</cite></p>
-          <p class="secondary">{{ publication.status }}</p>
         </article>
       }
     </section>
@@ -233,6 +204,12 @@
     </section>
     <section id="service-activities">
       <h2>Awards, Service &amp; Activities</h2>
+      <article>
+        <h3>International Assessments for Schools (Science), High Distinction, Class 9 — UNSW Global, 2013</h3>
+      </article>
+      <article>
+        <h3>International Assessments for Schools (Mathematics), Distinction, Class 9 — UNSW Global, 2013</h3>
+      </article>
       <article>
         <h3>Technical Volunteer — Educational AI Initiative</h3>
         <p>Reviewed the architecture and proposed features of an AI-assisted platform for children’s learning through an informal NGO-related initiative. Recommended improvements to system architecture, feature planning, privacy safeguards, and responsible, child-safe AI use.</p>

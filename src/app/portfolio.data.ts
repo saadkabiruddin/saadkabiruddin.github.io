@@ -37,15 +37,6 @@ export const publications = [
   },
 ];
 
-export const underReviewPublications = [
-  {
-    title: 'Automated Brain Tumor Detection from MRI Images Using EfficientNetB3 and Transfer Learning',
-    authors: ['Deepro Das', 'Saad Kabir Uddin', 'Mohammad Alauddin', 'Bornali Sarker', 'Thasnim Akhter'],
-    venue: 'International Conference on Computer and Information Technology (ICCIT 2026)',
-    status: 'Under Review',
-  },
-];
-
 export const projects = [
   {
     title: 'Replay Lock — Replay Protection Across Restarts',
