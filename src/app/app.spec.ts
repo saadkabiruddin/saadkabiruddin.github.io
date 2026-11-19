@@ -12,7 +12,7 @@ describe('Academic portfolio', () => {
   it('renders the academic profile and publications', async () => {
     const page = await render();
     expect(page.querySelector('h1')?.textContent).toBe('Saad Kabir Uddin');
-    expect(page.querySelectorAll('#publications article')).toHaveLength(2);
+    expect(page.querySelectorAll('#publications article')).toHaveLength(3);
   });
 
   it('resolves every section link without exposing a specialized CV', async () => {
