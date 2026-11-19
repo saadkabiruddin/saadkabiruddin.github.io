@@ -35,6 +35,24 @@ export const publications = [
       },
     ],
   },
+  {
+    title:
+      'Explainable and CPU-Efficient Brain Tumor Classification from MRI Using Two-Phase EfficientNetB3 Fine-Tuning',
+    authors: [
+      'Deepro Das',
+      'Saad Kabir Uddin',
+      'Mohammad Alauddin',
+      'Bornali Sarker',
+      'Thasnim Akhter',
+    ],
+    venue: 'arXiv',
+    citation: 'arXiv:2611.24440 [cs.CV], 2026.',
+    type: 'Preprint',
+    links: [
+      { label: 'arXiv', url: 'https://arxiv.org/abs/2611.24440' },
+      { label: 'PDF', url: 'https://arxiv.org/pdf/2611.24440' },
+    ],
+  },
 ];
 
 export const projects = [
