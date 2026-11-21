@@ -99,8 +99,8 @@ export class App {
 
   protected readonly publications = publications;
   protected readonly projectGroups = [
-    { label: 'Research', projects: projects.filter(project => !['DeliveryDash', 'Deep Learning Image Segmentation with PyTorch'].includes(project.title)) },
-    { label: 'Other', projects: projects.filter(project => ['Deep Learning Image Segmentation with PyTorch', 'DeliveryDash'].includes(project.title)) },
+    { label: 'Research', projects: projects.filter(project => project.title !== 'Deep Learning Image Segmentation with PyTorch') },
+    { label: 'Other', projects: projects.filter(project => project.title === 'Deep Learning Image Segmentation with PyTorch') },
   ];
   protected readonly experience = experience;
   protected readonly skills = skills;
