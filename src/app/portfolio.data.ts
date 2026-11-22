@@ -57,6 +57,17 @@ export const publications = [
 
 export const projects = [
   {
+    title: 'ResiliLoop: Dual-Layer Detection and Mitigation of Sensor Spoofing in Networked Controllers',
+    description:
+      'Built an MQTT attack proxy that injects bias, ramp, and forged messages into a simulated control loop, with a C# temperature-control simulation and local MQTTnet.Server broker.',
+    details:
+      'Implemented portable C defense modules for HMAC authentication, replay protection, and physics-based anomaly detection using a model observer and CUSUM. Used Python to analyze four defense configurations across seven scenarios; combined defenses detected bias, ramp, and forgery attacks within 0.2 seconds in preliminary host-based trials.',
+    technologies: 'C, C#, Python, MQTT; ESP32/FreeRTOS target',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/loopshield' },
+    ],
+  },
+  {
     title: 'Replay Lock — Replay Protection as a Protocol-State Problem Across Restarts',
     description:
       'Identified how a RAM-held replay counter resets on restart, returning the receiver to an earlier protocol state where previously captured messages can be accepted again.',
@@ -67,16 +78,15 @@ export const projects = [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/replay-lock' },
     ],
   },
-  
   {
-    title: 'ResiliLoop: Dual-Layer Detection and Mitigation of Sensor Spoofing in Networked Controllers',
+    title: 'AgentGuard – LLM Agent Security Gateway',
     description:
-      'Built an MQTT attack proxy that injects bias, ramp, and forged messages into a simulated control loop, with a C# temperature-control simulation and local MQTTnet.Server broker.',
+      'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model.',
     details:
-      'Implemented portable C defense modules for HMAC authentication, replay protection, and physics-based anomaly detection using a model observer and CUSUM. Used Python to analyze four defense configurations across seven scenarios; combined defenses detected bias, ramp, and forgery attacks within 0.2 seconds in preliminary host-based trials.',
-    technologies: 'C, C#, Python, MQTT; ESP32/FreeRTOS target',
+      'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls, including data theft and transfers hidden inside legitimate requests, and allowed 3/3 legitimate calls; role-only checks blocked 3/8.',
+    technologies: 'C#, ASP.NET Core, Python, Ollama, SQLite, LLM Security',
     links: [
-      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/loopshield' },
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/LlmAgentSecurityGateway' },
     ],
   },
   {
@@ -99,17 +109,6 @@ export const projects = [
     technologies: 'C#, Roslyn, ASP.NET Core, SQLite, xUnit, Static Analysis',
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/RoslynSecurityAnalyzer' },
-    ],
-  },
-  {
-    title: 'AgentGuard – LLM Agent Security Gateway',
-    description:
-      'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model.',
-    details:
-      'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls, including data theft and transfers hidden inside legitimate requests, and allowed 3/3 legitimate calls; role-only checks blocked 3/8.',
-    technologies: 'C#, ASP.NET Core, Python, Ollama, SQLite, LLM Security',
-    links: [
-      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/LlmAgentSecurityGateway' },
     ],
   },
   {
