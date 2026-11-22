@@ -102,7 +102,7 @@ export const projects = [
     ],
   },
   {
-    title: 'LLM Agent Security Gateway (AgentGuard)',
+    title: 'AgentGuard – LLM Agent Security Gateway',
     description:
       'Built an ASP.NET Core security gateway between an Ollama banking agent and its tools, enforcing role permissions, task scope, and argument provenance independently of the model.',
     details:
