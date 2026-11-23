@@ -57,6 +57,17 @@ export const publications = [
 
 export const projects = [
   {
+    title: 'NASReplayLab',
+    description:
+      'Built a software-only LTE testbed to study attach signaling and how an srsRAN 4G device handles duplicate Non-Access Stratum (NAS) messages.',
+    details:
+      'Used Python and TShark to turn packet captures into decoded message tables and a sequence diagram of a normal LTE attach.',
+    technologies: 'LTE, srsRAN 4G, ZeroMQ, Python, TShark, Matplotlib',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/NASReplayLab' },
+    ],
+  },
+  {
     title: 'ResiliLoop: Dual-Layer Detection and Mitigation of Sensor Spoofing in Networked Controllers',
     description:
       'Built an MQTT attack proxy that injects bias, ramp, and forged messages into a simulated control loop, with a C# temperature-control simulation and local MQTTnet.Server broker.',
@@ -121,16 +132,6 @@ export const projects = [
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/ml-backdoor-security-lab' },
     ],
-  },
-  {
-    title: 'Deep Learning Image Segmentation with PyTorch',
-    description:
-      'Built a semantic segmentation pipeline with U-Net and an EfficientNet-B0 encoder.',
-    details:
-      'Prepared image and mask datasets, trained on a GPU for 25 epochs with Dice Loss and BCEWithLogitsLoss, and selected the best checkpoint by validation loss before running inference.',
-    technologies: 'Python, PyTorch, Albumentations, OpenCV',
-    notebook:
-      'https://colab.research.google.com/drive/1yWOlh09kseeSswBDAZEwQuDnvLYih22R?usp=drive_link',
   },
 ];
 
