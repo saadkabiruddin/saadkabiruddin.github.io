@@ -68,12 +68,6 @@ export const projects = [
     ],
   },
   {
-    title: 'PacketLens',
-    links: [
-      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/packetlens' },
-    ],
-  },
-  {
     title: 'ResiliLoop: Dual-Layer Detection and Mitigation of Sensor Spoofing in Networked Controllers',
     description:
       'Built an MQTT attack proxy that injects bias, ramp, and forged messages into a simulated control loop, with a C# temperature-control simulation and local MQTTnet.Server broker.',
@@ -137,6 +131,17 @@ export const projects = [
     technologies: 'Python, PyTorch, torchvision, MNIST, Matplotlib, Jupyter',
     links: [
       { label: 'GitHub', url: 'https://github.com/saadkabiruddin/ml-backdoor-security-lab' },
+    ],
+  },
+  {
+    title: 'PacketLens',
+    description:
+      'Built a Rust packet analyzer for Ethernet and IPv4 with a dependency-free CLI for offline PCAP files, optional live capture, and an egui desktop interface.',
+    details:
+      'Decodes TCP, UDP, and ICMP headers and distinguishes truncated capture records from malformed packets. The desktop interface shows a filterable packet table, decoded headers, protocol summaries, and a packet-rate chart.',
+    technologies: 'Rust, PCAP, Ethernet, IPv4, egui, Npcap, libpcap',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/packetlens' },
     ],
   },
 ];
