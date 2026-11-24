@@ -68,6 +68,12 @@ export const projects = [
     ],
   },
   {
+    title: 'PacketLens',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/packetlens' },
+    ],
+  },
+  {
     title: 'ResiliLoop: Dual-Layer Detection and Mitigation of Sensor Spoofing in Networked Controllers',
     description:
       'Built an MQTT attack proxy that injects bias, ramp, and forged messages into a simulated control loop, with a C# temperature-control simulation and local MQTTnet.Server broker.',
