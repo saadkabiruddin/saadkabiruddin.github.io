@@ -97,7 +97,7 @@ export const projects = [
       'Added deny-by-default policy checks and audit logging. In a simulated compromised-agent benchmark, full enforcement blocked 8/8 unauthorized calls, including data theft and transfers hidden inside legitimate requests, and allowed 3/3 legitimate calls; role-only checks blocked 3/8.',
     technologies: 'C#, ASP.NET Core, Python, Ollama, SQLite, LLM Security',
     links: [
-      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/LlmAgentSecurityGateway' },
+      { label: 'GitHub', url: 'https://github.com/saadkabiruddin/AgentGuard' },
     ],
   },
   {
